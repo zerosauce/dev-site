@@ -1,3 +1,6 @@
+# Project files
+database.json
+
 # Logs
 logs
 *.log
@@ -36,7 +39,8 @@ node_modules
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
