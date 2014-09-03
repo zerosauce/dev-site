@@ -9,6 +9,8 @@ var fs             = require('fs');
 
 //connect
 mongoose.connect('mongodb://localhost/dev-app');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'database connection error:'));
 
 //configure
 app.set('port', process.env.PORT || 3000);
@@ -29,7 +31,9 @@ fs.readdirSync(__dirname + '/controllers').forEach(function (file) {
 });
 
 //listen
-var port = app.get('port');
-app.listen(port, function(){
-    console.log("listening on port " + port);
+db.once('open', function callback () {
+    var port = app.get('port');
+    app.listen(port, function(){
+        console.log("listening on port " + port);
+    });
 });
