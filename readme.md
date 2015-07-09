@@ -1,7 +1,8 @@
 MEAN dev-app
 ===================
 
-This app is MEAN. Documentation and software still under development, expect it to change drastically over time. Currently this app provides basic CRUD services.
+Documentation and software still under development. Currently this app provides basic CRUD services for Paper objects (name, url).
+Built using MongoDB, Express, Node.js, Angular.js, Jade.
 
 ----------
 
