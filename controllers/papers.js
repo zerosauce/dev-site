@@ -11,7 +11,6 @@ module.exports.controller = function(app, express) {
 
     //load papers view
     app.get('/papers', function(req, res){
-        console.log('views not yet implemented');
         res.render('papers');
     })
 
