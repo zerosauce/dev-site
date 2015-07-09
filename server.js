@@ -35,7 +35,7 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
-// dynamically include routes (Controller)
+// dynamically include routes
 fs.readdirSync(__dirname + '/controllers').forEach(function (file) {
   if(file.substr(-3) == '.js') {
       route = require(__dirname + '/controllers/' + file);
